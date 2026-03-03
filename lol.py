@@ -17,6 +17,7 @@ def draw_cube():
         (0, 4), (1, 5), (2, 6), (3, 7)
     ]
     
+    glColor3f(0, 1, 1)  # Cyan color
     glBegin(GL_LINES)
     for edge in edges:
         for vertex in edge:
@@ -30,6 +31,7 @@ def main():
     pygame.display.set_caption("3D Modeling Program")
     
     glEnable(GL_DEPTH_TEST)
+    glClearColor(0.1, 0.1, 0.1, 1.0)  # Dark gray background
     glMatrixMode(GL_PROJECTION)
     gluPerspective(45, (display[0] / display[1]), 0.1, 50.0)
     glMatrixMode(GL_MODELVIEW)
